@@ -7,7 +7,7 @@ const filePath = path.join(__dirname, 'notepad.txt');
 let debounceTimeout;
 
 fs.watchFile(filePath, (curr, prev) => {
-    console.log('File changed');
+    console.log('File changed...');
  
     if (debounceTimeout) {
         clearTimeout(debounceTimeout);
@@ -25,7 +25,7 @@ fs.watchFile(filePath, (curr, prev) => {
                 searchGoogle(searchQuery);
             }
         });
-    }, 5000); 
+    }, 2000); 
 });
 
 function searchGoogle(query) {
